@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>React Potato</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      function Football(props) {
+        return (
+          <div>
+            <h1>{props.type}</h1>
+            <h1>Win/loss record: {props.record}</h1>
+            <img src={props.image} />
+          </div>
+        );
+      }
+      // function NFL(props) {
+      //   return (
+      //     <div>
+      //       <h1>{props.name}</h1>
+      //       <h1>Win/loss record {props.record}</h1>
+      //       <img src={props.image} />
+      //     </div>
+      //   );
+      // }
+      ReactDOM.render(
+        <Football
+          record="931-326-53"
+          type="The Ohio State Buckeyes"
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ohio_State_Buckeyes_logo.svg/1200px-Ohio_State_Buckeyes_logo.svg.png"
+        />,
+        // <NFL
+        //   name="New England Patriots"
+        //   record="500-391-9"
+        //   image="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png"
+        // />,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
