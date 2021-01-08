@@ -20,35 +20,39 @@
     <script type="text/babel">
       function Football(props) {
         return (
-          <div>
+          <div className="college">
             <h1>{props.type}</h1>
             <h1>Win/loss record: {props.record}</h1>
             <img src={props.image} />
           </div>
         );
       }
-      // function NFL(props) {
-      //   return (
-      //     <div>
-      //       <h1>{props.name}</h1>
-      //       <h1>Win/loss record {props.record}</h1>
-      //       <img src={props.image} />
-      //     </div>
-      //   );
-      // }
-      ReactDOM.render(
-        <Football
-          record="931-326-53"
-          type="The Ohio State Buckeyes"
-          image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ohio_State_Buckeyes_logo.svg/1200px-Ohio_State_Buckeyes_logo.svg.png"
-        />,
-        // <NFL
-        //   name="New England Patriots"
-        //   record="500-391-9"
-        //   image="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png"
-        // />,
-        document.getElementById("root")
+      function Nfl(props) {
+        return (
+          <div className="nfl">
+            <h1>{props.name}</h1>
+            <h1>Win/loss record {props.record}</h1>
+            <img src={props.image} />
+          </div>
+        );
+      }
+      const element = (
+        <div>
+          <Football
+            record="931-326-53"
+            type="The Ohio State Buckeyes"
+            image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ohio_State_Buckeyes_logo.svg/1200px-Ohio_State_Buckeyes_logo.svg.png"
+          />
+          ,
+          <Nfl
+            name="New England Patriots"
+            record="500-391-9"
+            image="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png"
+          />
+        </div>
       );
+
+      ReactDOM.render(element, document.getElementById("root"));
     </script>
   </body>
 </html>

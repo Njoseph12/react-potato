@@ -2,3 +2,13 @@ img {
   height: 200px;
   width: 200px;
 }
+div.college {
+  border: 5px solid black;
+  margin-right: 300px;
+  background-color: gray;
+}
+div.nfl {
+  border: 5px solid black;
+  margin-right: 300px;
+  background-color: red;
+}
